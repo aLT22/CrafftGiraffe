@@ -1,5 +1,6 @@
 package mn.factory.crafftgiraffe.adapter
 
+import android.content.Intent
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +10,7 @@ import android.widget.RatingBar
 import android.widget.TextView
 import mn.factory.crafftgiraffe.R
 import mn.factory.crafftgiraffe.data.model.Master
+import mn.factory.crafftgiraffe.ui.profile.ProfileActivity
 import mn.factory.crafftgiraffe.utils.ext.setRegularFont
 import java.util.*
 
@@ -75,6 +77,14 @@ class MastersViewHolder(view: View)
     }
 
     override fun onClick(v: View?) {
+        when (adapterPosition) {
+            0 -> {
+                val intent = Intent(v?.context, ProfileActivity::class.java)
+                intent.putExtra(ProfileActivity.KEY_EMAIL, "varnavskaya@factory.mn")
+
+                v?.context?.startActivity(intent)
+            }
+        }
     }
 
 }

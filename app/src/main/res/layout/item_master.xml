@@ -27,7 +27,7 @@
     <View
         android:id="@+id/orangeView"
         android:layout_width="0dp"
-        android:layout_height="18dp"
+        android:layout_height="14dp"
         android:background="@color/colorOrange"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="@+id/masterName"

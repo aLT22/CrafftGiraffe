@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/profile"
+    tools:context=".ui.profile.ProfileActivity">
+
+    <ImageView
+        android:id="@+id/allPhotos"
+        android:layout_width="160dp"
+        android:layout_height="48dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/all_photos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/horizontalFourtyGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/verticalTwentyGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2"/>
+
+    <ImageView
+        android:id="@+id/sendMail"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@drawable/sent"
+        app:layout_constraintBottom_toTopOf="@id/horizontalFourtyGuideline"
+        app:layout_constraintLeft_toLeftOf="@id/verticalTwentyGuideline"
+        app:layout_constraintRight_toRightOf="@+id/verticalTwentyGuideline"
+        app:layout_constraintTop_toBottomOf="@id/horizontalFourtyGuideline"/>
+
+</android.support.constraint.ConstraintLayout>

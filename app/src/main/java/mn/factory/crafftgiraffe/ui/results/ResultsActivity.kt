@@ -23,12 +23,12 @@ class ResultsActivity : AppCompatActivity() {
             onBackPressed()
         }
 
-        mastersAdapter.items.add(Master("Варнавская Елена", 5))
-        mastersAdapter.items.add(Master("Ozetta Knitwear", 4))
-        mastersAdapter.items.add(Master("Stephen West", 5))
-        mastersAdapter.items.add(Master("Caitlin Hunter", 3))
-        mastersAdapter.items.add(Master("Susanne Sommer", 5))
-        mastersAdapter.items.add(Master("Etta Munoz", 5))
+        mastersAdapter.items.add(Master("Варнавская Елена", "varnavskaya@factory.mn", 5))
+        mastersAdapter.items.add(Master("Ozetta Knitwear", "", 4))
+        mastersAdapter.items.add(Master("Stephen West", "", 5))
+        mastersAdapter.items.add(Master("Caitlin Hunter", "", 3))
+        mastersAdapter.items.add(Master("Susanne Sommer", "", 5))
+        mastersAdapter.items.add(Master("Etta Munoz", "", 5))
 
         mastersList.apply {
             setHasFixedSize(true)

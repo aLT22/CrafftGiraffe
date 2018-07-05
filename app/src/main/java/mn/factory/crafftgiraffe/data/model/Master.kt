@@ -5,5 +5,6 @@ package mn.factory.crafftgiraffe.data.model
  */
 data class Master(
         val name: String,
+        val email: String,
         val mark: Int
 )
