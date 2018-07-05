@@ -38,6 +38,10 @@
             android:name=".ui.photos.AllPhotosActivity"
             android:theme="@style/FullScreenTheme">
         </activity>
+        <activity
+            android:name=".ui.orighami.OrighamiActivity"
+            android:theme="@style/FullScreenTheme">
+        </activity>
     </application>
 
 </manifest>

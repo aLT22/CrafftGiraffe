@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import mn.factory.crafftgiraffe.R
 import mn.factory.crafftgiraffe.data.model.Category
+import mn.factory.crafftgiraffe.ui.orighami.OrighamiActivity
 import mn.factory.crafftgiraffe.ui.results.ResultsActivity
 import java.util.*
 
@@ -57,6 +58,7 @@ class CategoriesViewHolder(view: View)
 
     override fun onClick(v: View?) {
         when (adapterPosition) {
+            1 -> v?.context?.startActivity(Intent(v.context, OrighamiActivity::class.java))
             2 -> v?.context?.startActivity(Intent(v.context, ResultsActivity::class.java))
         }
     }
