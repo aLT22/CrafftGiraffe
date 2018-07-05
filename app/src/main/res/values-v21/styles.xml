@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="WhiteEditText">
+        <item name="android:colorControlNormal">@color/colorWhite</item>
+        <item name="android:colorControlActivated">@color/colorWhite</item>
+        <item name="android:textColorHint">@color/colorWhiteAlpha</item>
+    </style>
+</resources>
