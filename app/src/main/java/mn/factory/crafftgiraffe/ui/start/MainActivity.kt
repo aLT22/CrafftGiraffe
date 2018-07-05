@@ -1,7 +1,12 @@
 package mn.factory.crafftgiraffe.ui.start
 
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
+import android.support.annotation.RequiresApi
+import android.support.v4.app.ActivityOptionsCompat
+import android.support.v4.util.Pair
+import android.support.v4.view.ViewCompat
 import android.support.v7.app.AppCompatActivity
 import android.view.KeyEvent
 import android.view.inputmethod.EditorInfo
@@ -11,10 +16,12 @@ import mn.factory.crafftgiraffe.R
 import mn.factory.crafftgiraffe.ui.categories.CategoriesActivity
 import mn.factory.crafftgiraffe.utils.ext.setRegularFont
 
+
 class MainActivity :
         AppCompatActivity(),
         TextView.OnEditorActionListener {
 
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -50,18 +57,25 @@ class MainActivity :
     }
 
     private fun startCategoriesActivity(): Boolean {
+        val options: ActivityOptionsCompat = ActivityOptionsCompat
+                .makeSceneTransitionAnimation(this,
+                        Pair.create(startScreenContainer, ViewCompat.getTransitionName(startScreenContainer)),
+                        Pair.create(searchCity, ViewCompat.getTransitionName(searchCity)),
+                        Pair.create(searchCity, ViewCompat.getTransitionName(searchCity))
+                )
+
         val bundle = Bundle()
         bundle.putString(KEY_CITY, searchCity.text.toString())
 
         val intent = Intent(this, CategoriesActivity::class.java)
         intent.putExtras(bundle)
 
-        startActivity(intent)
+        startActivity(intent, options.toBundle())
         return true
     }
 
     override fun onEditorAction(v: TextView?, actionId: Int, event: KeyEvent?): Boolean {
-        when (v?.id) {
+        return when (v?.id) {
             R.id.searchCity -> {
                 if (
                         actionId == EditorInfo.IME_ACTION_SEARCH ||
@@ -72,9 +86,9 @@ class MainActivity :
                     startCategoriesActivity()
                 }
 
-                return false
+                false
             }
-            else -> return false
+            else -> false
         }
     }
 

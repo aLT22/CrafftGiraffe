@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="128dp"
+                                             android:layout_margin="8dp"
+                                             android:background="@color/colorWhite">
+
+    <ImageView
+        android:id="@+id/masterAvatar"
+        android:layout_width="78dp"
+        android:layout_height="78dp"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/klubok"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/horizontalHalfGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <View
+        android:id="@+id/orangeView"
+        android:layout_width="0dp"
+        android:layout_height="18dp"
+        android:background="@color/colorOrange"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/masterName"
+        app:layout_constraintRight_toRightOf="@+id/masterName"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/masterName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:textColor="@color/colorBlack"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalHalfGuideline"
+        app:layout_constraintLeft_toRightOf="@+id/masterAvatar"
+        tools:text="Lena Varnavskaya"/>
+
+    <RatingBar
+        android:id="@+id/masterRating"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginLeft="24dp"
+        android:theme="@style/OrangeRatingBar"
+        app:layout_constraintLeft_toRightOf="@+id/masterAvatar"
+        app:layout_constraintTop_toBottomOf="@+id/orangeView"/>
+
+</android.support.constraint.ConstraintLayout>

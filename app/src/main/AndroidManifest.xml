@@ -25,6 +25,10 @@
             android:name=".ui.categories.CategoriesActivity"
             android:theme="@style/FullScreenTheme">
         </activity>
+        <activity
+            android:name=".ui.results.ResultsActivity"
+            android:theme="@style/FullScreenTheme">
+        </activity>
     </application>
 
 </manifest>

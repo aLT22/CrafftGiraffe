@@ -7,6 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/start_background"
+    android:transitionName="@string/start_transition_name"
     tools:context=".ui.start.MainActivity">
 
     <TextView
@@ -37,6 +38,7 @@
         android:textAllCaps="true"
         android:textSize="36sp"
         android:theme="@style/WhiteEditText"
+        android:transitionName="@string/start_transition_name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
