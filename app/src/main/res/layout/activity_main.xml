@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/startScreenContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/start_background"
+    android:transitionName="@string/start_transition_name"
+    tools:context=".ui.start.MainActivity">
+
+    <TextView
+        android:id="@+id/search"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:text="Обучайтесь у лучших местных мастеров по всему миру. Введите город, который планируете посетить, или в котором находитесь сейчас"
+        android:textColor="@color/colorWhite"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/searchCity"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/searchCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:gravity="center"
+        android:hint="Город"
+        android:inputType="text"
+        android:textAllCaps="true"
+        android:textSize="36sp"
+        android:theme="@style/WhiteEditText"
+        android:transitionName="@string/start_transition_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/verticalHalfPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:text="Вход"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/verticalHalfPercent"/>
+
+    <TextView
+        android:id="@+id/slash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="/"
+        android:textColor="@color/colorWhite"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/login"
+        app:layout_constraintLeft_toRightOf="@+id/login"
+        app:layout_constraintRight_toLeftOf="@+id/register"
+        app:layout_constraintTop_toTopOf="@+id/login"/>
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:text="Регистрация"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/verticalHalfPercent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

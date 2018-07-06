@@ -3,4 +3,16 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorWhiteAlpha">#f7f7f7</color>
+    <color name="colorOrange">#FFCF80</color>
+    <color name="colorBlack">#000000</color>
+
+    <color name="colorLepka">#9DABFF</color>
+    <color name="colorOrighami">#FFB487</color>
+    <color name="colorResults">#FFD38A</color>
+    <color name="colorPletenie">#F49EFB</color>
+    <color name="colorCooking">#9EFBB2</color>
+    <color name="colorArt">#80EEF8</color>
 </resources>
