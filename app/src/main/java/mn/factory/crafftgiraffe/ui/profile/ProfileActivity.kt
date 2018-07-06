@@ -33,6 +33,12 @@ class ProfileActivity : AppCompatActivity() {
         arrowBack.setOnClickListener {
             onBackPressed()
         }
+
+        address.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(ADDRESS))
+
+            startActivity(intent)
+        }
     }
 
     private fun setFonts() {
@@ -43,5 +49,8 @@ class ProfileActivity : AppCompatActivity() {
         const val TAG = "ProfileActivity"
 
         const val KEY_EMAIL = "KEY_EMAIL"
+
+        private const val LOCATION = "Calle Conde Duque, 11, 28015, Madrid, Spain"
+        const val ADDRESS = "http://maps.google.co.in/maps?q=$LOCATION"
     }
 }
