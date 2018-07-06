@@ -8,7 +8,11 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import mn.factory.crafftgiraffe.R
 import mn.factory.crafftgiraffe.data.model.Category
+import mn.factory.crafftgiraffe.ui.art.ArtActivity
+import mn.factory.crafftgiraffe.ui.cooking.CookingActivity
+import mn.factory.crafftgiraffe.ui.lepka.LepkaActivity
 import mn.factory.crafftgiraffe.ui.orighami.OrighamiActivity
+import mn.factory.crafftgiraffe.ui.pletenie.PletenieActivity
 import mn.factory.crafftgiraffe.ui.results.ResultsActivity
 import java.util.*
 
@@ -58,8 +62,12 @@ class CategoriesViewHolder(view: View)
 
     override fun onClick(v: View?) {
         when (adapterPosition) {
+            0 -> v?.context?.startActivity(Intent(v.context, LepkaActivity::class.java))
             1 -> v?.context?.startActivity(Intent(v.context, OrighamiActivity::class.java))
             2 -> v?.context?.startActivity(Intent(v.context, ResultsActivity::class.java))
+            3 -> v?.context?.startActivity(Intent(v.context, PletenieActivity::class.java))
+            4 -> v?.context?.startActivity(Intent(v.context, CookingActivity::class.java))
+            5 -> v?.context?.startActivity(Intent(v.context, ArtActivity::class.java))
         }
     }
 

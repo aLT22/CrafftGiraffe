@@ -50,6 +50,22 @@
             android:name=".ui.profile.ProfileActivity"
             android:theme="@style/FullScreenTheme">
         </activity>
+        <activity
+            android:name=".ui.cooking.CookingActivity"
+            android:theme="@style/FullScreenTheme">
+        </activity>
+        <activity
+            android:name=".ui.art.ArtActivity"
+            android:theme="@style/FullScreenTheme">
+        </activity>
+        <activity
+            android:name=".ui.pletenie.PletenieActivity"
+            android:theme="@style/FullScreenTheme">
+        </activity>
+        <activity
+            android:name=".ui.lepka.LepkaActivity"
+            android:theme="@style/FullScreenTheme">
+        </activity>
     </application>
 
 </manifest>

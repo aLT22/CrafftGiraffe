@@ -1,5 +1,6 @@
 package mn.factory.crafftgiraffe.ui.categories
 
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.support.annotation.RequiresApi
@@ -13,6 +14,7 @@ import kotlinx.android.synthetic.main.activity_categories.*
 import mn.factory.crafftgiraffe.R
 import mn.factory.crafftgiraffe.adapter.CategoriesAdapter
 import mn.factory.crafftgiraffe.data.model.Category
+import mn.factory.crafftgiraffe.ui.profile.ProfileActivity
 import mn.factory.crafftgiraffe.ui.start.MainActivity
 import mn.factory.crafftgiraffe.utils.ext.setRegularFont
 

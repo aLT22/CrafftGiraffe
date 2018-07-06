@@ -15,6 +15,7 @@ class LoginActivity : AppCompatActivity() {
 
         enterToProfile.setOnClickListener {
             startActivity(Intent(this, ProfileActivity::class.java))
+            finish()
         }
     }
 }
