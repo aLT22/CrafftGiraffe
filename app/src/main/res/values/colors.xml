@@ -15,4 +15,6 @@
     <color name="colorPletenie">#F49EFB</color>
     <color name="colorCooking">#9EFBB2</color>
     <color name="colorArt">#80EEF8</color>
+
+    <color name="colorSplashBackground">#F6F3F3</color>
 </resources>
