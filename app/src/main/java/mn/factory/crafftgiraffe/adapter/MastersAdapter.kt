@@ -10,7 +10,7 @@ import android.widget.RatingBar
 import android.widget.TextView
 import mn.factory.crafftgiraffe.R
 import mn.factory.crafftgiraffe.data.model.Master
-import mn.factory.crafftgiraffe.ui.profile.ProfileActivity
+import mn.factory.crafftgiraffe.ui.master.MasterActivity
 import mn.factory.crafftgiraffe.utils.ext.setRegularFont
 import java.util.*
 
@@ -79,8 +79,8 @@ class MastersViewHolder(view: View)
     override fun onClick(v: View?) {
         when (adapterPosition) {
             0 -> {
-                val intent = Intent(v?.context, ProfileActivity::class.java)
-                intent.putExtra(ProfileActivity.KEY_EMAIL, "varnavskaya@factory.mn")
+                val intent = Intent(v?.context, MasterActivity::class.java)
+                intent.putExtra(MasterActivity.KEY_EMAIL, "varnavskaya@factory.mn")
 
                 v?.context?.startActivity(intent)
             }

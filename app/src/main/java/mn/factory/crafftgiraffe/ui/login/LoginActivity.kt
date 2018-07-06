@@ -1,10 +1,11 @@
 package mn.factory.crafftgiraffe.ui.login
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_login.*
 import mn.factory.crafftgiraffe.R
+import mn.factory.crafftgiraffe.ui.profile.ProfileActivity
 
 class LoginActivity : AppCompatActivity() {
 
@@ -13,7 +14,7 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         enterToProfile.setOnClickListener {
-            Toast.makeText(this, "Go to Profile", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, ProfileActivity::class.java))
         }
     }
 }
