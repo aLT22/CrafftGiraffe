@@ -29,6 +29,10 @@ class ProfileActivity : AppCompatActivity() {
                 startActivity(Intent.createChooser(sendMailIntent, "Send mail to ${it.getStringExtra(KEY_EMAIL)} via:"))
             }
         }
+
+        arrowBack.setOnClickListener {
+            onBackPressed()
+        }
     }
 
     private fun setFonts() {
