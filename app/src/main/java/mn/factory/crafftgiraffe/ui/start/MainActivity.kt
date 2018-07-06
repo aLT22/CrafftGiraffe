@@ -14,6 +14,7 @@ import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_main.*
 import mn.factory.crafftgiraffe.R
 import mn.factory.crafftgiraffe.ui.categories.CategoriesActivity
+import mn.factory.crafftgiraffe.ui.login.LoginActivity
 import mn.factory.crafftgiraffe.utils.ext.setRegularFont
 
 
@@ -27,6 +28,10 @@ class MainActivity :
         setContentView(R.layout.activity_main)
 
         setFonts()
+
+        login.setOnClickListener {
+            startActivity(Intent(this, LoginActivity::class.java))
+        }
     }
 
     override fun onStart() {

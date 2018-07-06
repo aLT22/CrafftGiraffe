@@ -42,6 +42,10 @@
             android:name=".ui.orighami.OrighamiActivity"
             android:theme="@style/FullScreenTheme">
         </activity>
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:theme="@style/FullScreenTheme">
+        </activity>
     </application>
 
 </manifest>
